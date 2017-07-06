@@ -4,6 +4,16 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+ .navbar-brand{
+ font-family: 'Berkshire Swash', cursive;
+ color: lavender;
+ }
+
+.nav{
+ font-family: 'Berkshire Swash', cursive;
+ color: lavender;
+}
+
 body {
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
@@ -23,8 +33,19 @@ body {
 /* Customize the text color and shadow color and to optimize text legibility. */
 
 .tagline {
+    font-family: 'Berkshire Swash', cursive;
     text-shadow: 0 0 10px #000;
     color: #fff;
+    margin-bottom: 10px;
+}
+
+
+h3{
+font-family: 'Berkshire Swash', cursive;
+ color: lavender;
+ margin-bottom: 1px;  
+ margin-left: 420px;
+ position: absolute;
 }
 
 .img-center {
@@ -33,4 +54,36 @@ body {
 
 footer {
     margin: 50px 0;
+}
+
+h2{
+    font-family: 'Berkshire Swash', cursive;
+}
+p{
+   font-family: 'Abhaya Libre', serif;
+}
+.col-sm-4{
+     font-family: 'Berkshire Swash', cursive;
+}
+.more-info1{
+    margin-top: 150px;
+    margin-left: 300px;
+}
+.col-lg-12{
+    margin-top: 200px;
+    margin-left: 50px;
+}
+h4{
+    font-family: 'Berkshire Swash', cursive;
+    color: white;
+    margin-top: 100px;
+    margin-left: 400px;
+}
+#the-stuff{
+    background-color: black;
+    display: inline-block;
+    width :1150px;
+    height:400px;
+    margin-top: 100px;
+    margin-right: 10px;
 }
