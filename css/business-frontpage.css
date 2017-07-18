@@ -40,6 +40,12 @@ body {
 }
 
 
+h5{
+   margin-left: 300px;
+   margin-bottom: 500px;
+   position: absolute;
+}
+
 h3{
 font-family: 'Berkshire Swash', cursive;
  color: lavender;
@@ -48,58 +54,80 @@ font-family: 'Berkshire Swash', cursive;
  position: absolute;
 }
 
-.img-center {
-    margin: 0 auto;
-}
-
-footer {
-    margin: 50px 0;
-}
-
 h2{
     font-family: 'Berkshire Swash', cursive;
 }
+
 p{
    font-family: 'Abhaya Libre', serif;
 }
-.col-sm-4{
-     font-family: 'Berkshire Swash', cursive;
-}
-.more-info1{
-    margin-top: 50px;
-    margin-right: 1px;
-}
-.col-lg-12{
-    margin-top: 200px;
-    margin-left: 50px;
-}
-h4{
-    font-family: 'Berkshire Swash', cursive;
-    color: white;
-    margin-top: 50px;
+
+.move-5{
+    color: lavender;
     margin-left: 500px;
+    margin-top: 40px;
 }
+
+.more-info1{
+    width: 700px;
+    margin-top: 20px;
+    margin-right: 100px;
+}
+
 #the-stuff{
     background-color: black;
     display: inline-block;
     width :1150px;
     height:400px;
-    margin-top: 100px;
-    margin-right: 10px;
+    margin-right: 1.55555%;
+    margin-top: 500px;
+    position: absolute;
 }
+
+.col-sm-41{
+    margin-right: 200px;
+    margin-top: 400px;
+    position: absolute;
+}
+
+.col-sm-42{
+    margin-left: 400px;
+    margin-top: 400px;
+    position: absolute;
+}
+
+.col-sm-43{
+    margin-left: 800px;
+    margin-top: 400px;
+    position: absolute;
+}
+
+.col-lg-19 {
+    margin-left:500px; 
+    margin-top:900px;
+}
+
+.col-lg-12{
+    margin-top: 200px;
+    margin-left: 50px;
+}
+
+.col-sm-48{
+     margin-top: 100px;
+     margin-left:730px; 
+     font-family: 'Berkshire Swash', cursive;
+     position: absolute;
+     color: white;
+}
+
 portfolio-hover { 
     background-color: lavender;
 }
+
 #portfolio * {
     z-index: 2;
 }
-.row {
-    margin-right: -15px;
-    margin-left: -15px;
-}
-div {
-    display: block;
-}
+
 #portfolio .portfolio-item .portfolio-link {
     display: block;
     position: relative;
@@ -111,4 +139,25 @@ div {
 }
 a, a.active, a:active, a:focus, a:hover {
     color: #18BC9C;
+}
+.img-circle {
+   border-radius: 50%
+}
+
+.img-center {
+    margin: 0 auto;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.row {
+    font-family: 'Berkshire Swash', cursive;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+div {
+    display: block;
 }
