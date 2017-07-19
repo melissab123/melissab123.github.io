@@ -1,0 +1,158 @@
+
+
+ <div class="links-0">
+    <ul class="list-inline text-right">
+      <li>
+        <a class="deviantart" href="#" onclick="window.open('http://meli-chan143.deviantart.com/', 'blank', 'width=500, height=500');">
+          <img src="http://www.freepngimg.com/download/deviantart_logo/4-2-deviantart-logo-transparent.png" style="width: 58px; height: 58px">
+        </a>
+      </li>
+      <li>
+        <a class="facebook" href="#" onclick="window.open('http://www.facebook.com/', 'blank', 'width=500, height=500');">
+          <img src="http://sfsrestore.com/wp-content/uploads/2014/12/transparent-facebook-logo-icon-1024x1024.png" style="width: 48px; height: 48px">
+        </a>
+      </li>
+      <li>
+        <a class="instagram" href="#" onclick="window.open('http://www.instagram.com/', 'blank', 'width=500, height=500');">
+          <img src="http://alumni.umh.es/files/2017/06/Instagram_logo_2016.svg_.png" style="width: 55px; height: 55px">
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<!--Sale Slide Section-->
+
+</div>
+
+  </header>
+  <div id="cssSlider">
+     <div id="slideImages">
+       <img class="slideImages" src="img/mmm444.jpg" alt>
+       <img class="slideImages" src="img/iii999.jpg" alt>
+       <img class="slideImages" src="img/ooo888.jpg" alt>
+       <div style="clear:left;"></div>
+     </div>
+  </div> 
+</div>
+
+<script>
+   var myIndex = 0;
+   carousel();
+
+   function carousel() {
+    var i;
+    var x = document.getElementsByClassName("slideImages");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 5 seconds
+}
+</script>
+
+
+#cssSlider {
+width: 1100px;
+height: auto;
+overflow: hidden;
+border: 0px solid #666;
+margin: 0 auto;
+margin-bottom: 15px;
+}
+#slideImages{
+  width: 5500px;
+  height: 593px;
+  overflow: hidden;
+  -webkit-animation: slide 16s infinite;
+  #slideImages img {
+  float: left;
+}
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+
+
+
+
+var $slider = $('.slideshow .slider'),
+  maxItems = $('.item', $slider).length,
+  dragging = false,
+  tracking,
+  rightTracking;
+
+$sliderRight = $('.slideshow').clone().addClass('slideshow-right').appendTo($('.split-slideshow'));
+
+rightItems = $('.item', $sliderRight).toArray();
+reverseItems = rightItems.reverse();
+$('.slider', $sliderRight).html('');
+for (i = 0; i < maxItems; i++) {
+  $(reverseItems[i]).appendTo($('.slider', $sliderRight));
+}
+
+$slider.addClass('slideshow-left');
+$('.slideshow-left').slick({
+  vertical: true,
+  verticalSwiping: true,
+  arrows: false,
+  infinite: true,
+  dots: true,
+  speed: 1000,
+  cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
+}).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+
+  if (currentSlide > nextSlide && nextSlide == 0 && currentSlide == maxItems - 1) {
+    $('.slideshow-right .slider').slick('slickGoTo', -1);
+    $('.slideshow-text').slick('slickGoTo', maxItems);
+  } else if (currentSlide < nextSlide && currentSlide == 0 && nextSlide == maxItems - 1) {
+    $('.slideshow-right .slider').slick('slickGoTo', maxItems);
+    $('.slideshow-text').slick('slickGoTo', -1);
+  } else {
+    $('.slideshow-right .slider').slick('slickGoTo', maxItems - 1 - nextSlide);
+    $('.slideshow-text').slick('slickGoTo', nextSlide);
+  }
+}).on("mousewheel", function(event) {
+  event.preventDefault();
+  if (event.deltaX > 0 || event.deltaY < 0) {
+    $(this).slick('slickNext');
+  } else if (event.deltaX < 0 || event.deltaY > 0) {
+    $(this).slick('slickPrev');
+  };
+}).on('mousedown touchstart', function(){
+  dragging = true;
+  tracking = $('.slick-track', $slider).css('transform');
+  tracking = parseInt(tracking.split(',')[5]);
+  rightTracking = $('.slideshow-right .slick-track').css('transform');
+  rightTracking = parseInt(rightTracking.split(',')[5]);
+}).on('mousemove touchmove', function(){
+  if (dragging) {
+    newTracking = $('.slideshow-left .slick-track').css('transform');
+    newTracking = parseInt(newTracking.split(',')[5]);
+    diffTracking = newTracking - tracking;
+    $('.slideshow-right .slick-track').css({'transform': 'matrix(1, 0, 0, 1, 0, ' + (rightTracking - diffTracking) + ')'});
+  }
+}).on('mouseleave touchend mouseup', function(){
+  dragging = false;
+});
+
+$('.slideshow-right .slider').slick({
+  swipe: false,
+  vertical: true,
+  arrows: false,
+  infinite: true,
+  speed: 950,
+  cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+  initialSlide: maxItems - 1
+});
+$('.slideshow-text').slick({
+  swipe: false,
+  vertical: true,
+  arrows: false,
+  infinite: true,
+  speed: 900,
+  cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
+});

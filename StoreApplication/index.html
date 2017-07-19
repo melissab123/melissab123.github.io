@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Melissa's Art Store</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+
+<div id="wrapper">
+  <header>
+  	<h1>Melissa's Art Store</h1>
+  	<style>
+ @import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
+   </style>
+
+<!--Link-->
+
+
+<body>
+ <div>
+
+  </header>
+  <div id="cssSlider">
+     <div id="slideImages">
+       <img class="slideImages" src="img/JJJ999.jpg" alt>
+       <img class="slideImages" src="img/III000.jpg" alt>
+       <img class="slideImages" src="img/LLL222.jpg" alt>
+       <div style="clear:left;"></div>
+     </div>
+    </div> 
+  </div>
+
+ <script>
+   var myIndex = 0;
+   carousel();
+
+   function carousel() {
+    var i;
+    var x = document.getElementsByClassName("slideImages");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 5 seconds
+}
+ </script>
+  
+   <!--Buying Section-->
+
+  <div class="col-sm-6 col-xs-4 col-lg-3">
+            <div class="sale1">
+                <div class="thumbnail">
+                    <img src="img/kml999.jpg" alt="" class="img-responsive coffee_mug_thumbnail">
+                    <div class="caption">
+                        <h4><a href="#">Ameythst</a></h4>
+                        <p class="text-justify">Ameythst print Size:20x10</p>
+                        <h4 style="float: left;">$14.99</h4>
+                        <h4 style="float: right;">
+                            <span class="glyphicon glyphicon-star glyphicon_icon" aria-hidden="true" title="Add to Favorites" onclick="addRemoveFavorite(this, 0);"></span>
+                            <span class="glyphicon glyphicon-shopping-cart glyphicon_icon" aria-hidden="true" title="Add to Cart" onclick="addRemoveCart(this, 0);"></span>
+                            </h4>
+                        <h4>&nbsp;</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="sale2">
+                <div class="thumbnail">
+                    <img src="img/uuu333.jpg" alt="" class="img-responsive coffee_mug_thumbnail">
+                    <div class="caption">
+                        <h4><a href="#">LED Girl</a></h4>
+                        <p class="text-justify">LED Girl print Size:20x10</p>
+                        <h4 style="float: left;">$14.99</h4>
+                        <h4 style="float: right;">
+                            <span class="glyphicon glyphicon-star glyphicon_icon" aria-hidden="true" title="Add to Favorites" onclick="addRemoveFavorite(this, 1);"></span>
+                            <span class="glyphicon glyphicon-shopping-cart glyphicon_icon" aria-hidden="true" title="Add to Cart" onclick="addRemoveCart(this, 1);"></span>
+                            </h4>
+                        <h4>&nbsp;</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="sale3">
+                <div class="thumbnail">
+                    <img src="img/ppp555.jpg" alt="" class="img-responsive coffee_mug_thumbnail">
+                    <div class="caption">
+                        <h4><a href="#">Space Creature</a></h4>
+                        <p class="text-justify">Space Creature print Size:20x10</p>
+                        <h4 style="float: left;">$14.99</h4>
+                        <h4 style="float: right;">
+                            <span class="glyphicon glyphicon-star glyphicon_icon" aria-hidden="true" title="Add to Favorites" onclick="addRemoveFavorite(this, 2);"></span>
+                            <span class="glyphicon glyphicon-shopping-cart glyphicon_icon" aria-hidden="true" title="Add to Cart" onclick="addRemoveCart(this, 2);"></span>
+                            </h4>
+                        <h4>&nbsp;</h4>
+                    </div>
+                </div>
+            </div>
+</body>
+</html>
